@@ -103,6 +103,7 @@ body {
   font-size: 25px;
   line-height: 19.65px;
   color: var(--text-white);
+  text-align: center;
   justify-content: flex-start;
   font-family: "Montserrat";
 }
