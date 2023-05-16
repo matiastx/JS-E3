@@ -1,0 +1,271 @@
+:root {
+  /* Text colors */
+  --text-gray: #adb9c7;
+  --text-white: #f3f4f6;
+
+  /* PALETA NUCBAZAPPI */
+  --bg-primary: #252525;
+  --bg-shadow: #01020780;
+  --bg-general: #191919;
+  --btn-1: #ffa100;
+  --btn-2: #fc2933;
+  --txt: #ffffff;
+  --btns: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  /* border: solid 1px blue; */
+}
+
+/* main */
+
+body {
+  max-width: 1200px;
+  background: var(--bg-general);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+/* hero */
+
+#hero {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.hero-info {
+  color: var(--text-white);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.hero-info h1 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 66px;
+}
+
+.hero-info p {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.hero-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 430px;
+  height: 240px;
+}
+
+.hero-card img {
+  width: 100%;
+}
+
+/* options */
+
+#options,
+#buscar {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 95%;
+  margin: 50px auto;
+  justify-content: center;
+  align-items: center;
+}
+#options h3,
+.tituloBuscar {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 19.65px;
+  color: var(--text-white);
+  justify-content: flex-start;
+  font-family: "Montserrat";
+}
+
+.options-cards-conteiner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.info-cards-options {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-general);
+  width: 150px;
+  height: 200px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  transition: all ease-out 0.5s;
+}
+
+.info-cards-options span {
+  color: var(--txt);
+  font-size: 18px;
+  font-family: "Gill Sans";
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.info-cards-options p {
+  color: var(--text-gray);
+  font-size: 15px;
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+}
+
+.food {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.food img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.rectangle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 15%;
+}
+
+.frm-buscar {
+  margin-bottom: 0px;
+  gap: 15px;
+  align-items: center;
+}
+
+.resultContainer {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-general);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  gap: 5%;
+  transition: all ease-out 0.5s;
+}
+
+.resultContainer:hover,
+.info-cards-options:hover {
+  border: 1px solid var(--btn-1);
+  transition: all ease-in 0.5s;
+}
+
+.resultContainer img {
+  max-width: 50%;
+  border-radius: 8%;
+}
+
+.resultContainerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.resultContainerInfo span,
+.resultContainerInfo p {
+  color: var(--text-gray);
+  font-size: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.resultContainerInfo span {
+  color: var(--text-white);
+}
+
+.resultIngredientes {
+  padding-top: none;
+}
+
+.resultContainerInfo h2 {
+  color: var(--text-white);
+  font-size: 28px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.resultPrecio {
+  background: var(--btns);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 34px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.btn {
+  background: var(--btns);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.frm-text {
+  border: none;
+  width: 180px;
+  height: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error-msg {
+  color: var(--btn-2);
+}
+
+#ingrList {
+  font-size: 16px;
+  color: var(--btn-1);
+}
+
+.resultContainer {
+  display: none;
+}

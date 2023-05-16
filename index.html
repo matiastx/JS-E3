@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>NucbaZappi</title>
+  </head>
+  <body>
+    <!-- Inicio del hero -->
+    <section id="hero">
+      <div class="hero-info">
+        <h1 class="title">NucbaZappy</h1>
+        <p>E3 Java Script.</p>
+      </div>
+      <div class="hero-card">
+        <img src="./img/pizza.png" />
+      </div>
+    </section>
+
+    <!-- Inicio de las Opciones -->
+    <section id="options">
+      <h3>Estas son Nuestras Opciones</h3>
+      <div class="options-cards-conteiner">
+        <!-- Card 1 -->
+        <div class="info-cards-options">
+          <div class="food">
+            <img src="./img/muzzarella.png" alt="pizza de Muzzarella" />
+          </div>
+          <span>Opcion: 1</span>
+          <p>Pizza de Muzzarella</p>
+          <div class="rectangle">
+            <img src="./img/Rectangle.png" />
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="info-cards-options">
+          <div class="food">
+            <img src="./img/cebolla.png" alt="pizza de Cebolla" />
+          </div>
+          <span>Opcion: 2</span>
+          <p>Pizza de Cebolla</p>
+          <div class="rectangle">
+            <img src="./img/Rectangle.png" />
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="info-cards-options">
+          <div class="food">
+            <img src="./img/4quesos.png" alt="pizza 4 Quesos" />
+          </div>
+          <span>Opcion: 3</span>
+          <p>Pizza 4 Quesos</p>
+          <div class="rectangle">
+            <img src="./img/Rectangle.png" />
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="info-cards-options">
+          <div class="food">
+            <img src="./img/especial.png" alt="pizza Especial" />
+          </div>
+          <span>Opcion: 4</span>
+          <p>Pizza Especial</p>
+          <div class="rectangle">
+            <img src="./img/Rectangle.png" />
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="info-cards-options">
+          <div class="food">
+            <img src="./img/anana.png" alt="pizza con Anana" />
+          </div>
+          <span>Opcion: 5</span>
+          <p>Pizza con Anana</p>
+          <div class="rectangle">
+            <img src="./img/Rectangle.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="buscar">
+      <h3 class="tituloBuscar">
+        Escribe el Numero de Opcion para mas informacion
+      </h3>
+      <form class="frm-buscar flex">
+        <input
+          type="text"
+          placeholder="Ingrese el Numero de Opcion"
+          id="txt_frm"
+          class="frm-text" />
+        <button class="btn" type="submit">
+          <img src="./img/lupa.svg" alt="" />
+        </button>
+      </form>
+      <span class="error-msg"></span>
+      <div class="resultContainer"></div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
