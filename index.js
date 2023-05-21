@@ -145,6 +145,7 @@ const toggleErrorMsg = () => {
 
 const submitHandler = (e) => {
   e.preventDefault();
+  ContBusqueda++;
 
   if (validation()) {
     UltimaBusqueda = pizzas.find((item) => item.id == txtBusqueda.value.trim());
@@ -152,8 +153,10 @@ const submitHandler = (e) => {
     saveOnLocalStorage();
     CardBusqueda.style.display = "flex";
     txtBusqueda.value = "";
+    ShowError("Opcion Encontrada");
+    ContBusqueda = 0;
   }
-  ContBusqueda++;
+
   toggleErrorMsg();
 };
 
