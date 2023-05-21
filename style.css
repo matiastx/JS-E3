@@ -258,8 +258,12 @@ body {
   text-align: center;
 }
 
-.error-msg {
+.red-msg {
   color: var(--btn-2);
+}
+
+.green-msg {
+  color: greenyellow;
 }
 
 #ingrList {

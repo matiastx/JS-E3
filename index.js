@@ -52,6 +52,13 @@ const txtBusqueda = document.querySelector(".frm-text");
 const ErrorMsg = document.querySelector(".error-msg");
 const CardBusqueda = document.querySelector(".resultContainer");
 
+let ContBusqueda = 0;
+let UltimaBusqueda = JSON.parse(localStorage.getItem("LastSearch")) || [];
+
+const saveOnLocalStorage = () => {
+  localStorage.setItem("LastSearch", JSON.stringify(UltimaBusqueda));
+};
+
 // Funciones Adicionales
 const ShowError = (mensaje) => {
   ErrorMsg.textContent = mensaje;
@@ -126,22 +133,42 @@ const renderPizza = (item) => {
   `;
 };
 
+const toggleErrorMsg = () => {
+  if (ContBusqueda !== 0) {
+    ErrorMsg.classList.remove("green-msg");
+    ErrorMsg.classList.add("red-msg");
+    return;
+  }
+  ErrorMsg.classList.remove("red-msg");
+  ErrorMsg.classList.add("green-msg");
+};
+
 const submitHandler = (e) => {
   e.preventDefault();
 
   if (validation()) {
-    const MatchingPizza = pizzas.find(
-      (item) => item.id == txtBusqueda.value.trim()
-    );
-    CardBusqueda.innerHTML = renderPizza(MatchingPizza);
+    UltimaBusqueda = pizzas.find((item) => item.id == txtBusqueda.value.trim());
+    CardBusqueda.innerHTML = renderPizza(UltimaBusqueda);
+    saveOnLocalStorage();
     CardBusqueda.style.display = "flex";
     txtBusqueda.value = "";
   }
+  ContBusqueda++;
+  toggleErrorMsg();
+};
+
+const LastSearchRender = () => {
+  console.log(ContBusqueda);
+  CardBusqueda.innerHTML = renderPizza(UltimaBusqueda);
+  CardBusqueda.style.display = "flex";
+  toggleErrorMsg();
+  ShowError("* Ultima Busqueda Realizada");
 };
 
 //init
 const init = () => {
   frmBusqueda.addEventListener("submit", submitHandler);
+  LastSearchRender();
 };
 
 init();
